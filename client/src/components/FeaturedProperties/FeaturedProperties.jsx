@@ -8,7 +8,7 @@ const FeaturedProperties = () => {
     return (
         <div className='fp'>
             
-            {loading ? "loading" :             
+            {loading ? "Loading" :             
             <>
                 {data.map((item) => (
 
@@ -16,9 +16,8 @@ const FeaturedProperties = () => {
                       {item.photos &&  <img
                             src={item.photos[0]}
                             alt=""
-                            className="fpImg"
-                        />}
-                        <span className='fpName'>{item.name} </span>
+                            className="fpImg" 
+                        />}                        <span className='fpName'>{item.name} </span>
                         <span className='fpCity'>{item.city}</span>
                         <span className='fpPrice'>Starting from ${item.cheapestPrice}</span>
                        {item.rating && 
